@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package gossip;
+
+option go_package = "./;gossip";
+
+service GossipService {
+  rpc DiscussGossip (stream Gossip) returns (stream Gossip);
+}
+
+message Gossip {
+  string text = 1;
+}

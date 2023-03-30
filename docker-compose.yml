@@ -6,8 +6,6 @@ services:
     environment:
       - HOSTPORT=0.0.0.0:5051
       - NEIGHBOURS=lucy:5051,ken:5051,kate:5051,sally:5051
-    volumes:
-      - ./log:/app/log
     command: "./main"
 
   lucy:
@@ -15,8 +13,6 @@ services:
     environment:
       - HOSTPORT=0.0.0.0:5051
       - NEIGHBOURS=mark:5051,ken:5051,kate:5051,sally:5051
-    volumes:
-      - ./log:/app/log
     command: "./main"
 
   ken:
@@ -24,8 +20,6 @@ services:
     environment:
       - HOSTPORT=0.0.0.0:5051
       - NEIGHBOURS=mark:5051,lucy:5051,kate:5051,sally:5051
-    volumes:
-      - ./log:/app/log
     command: "./main"
   
   kate:
@@ -33,8 +27,6 @@ services:
     environment:
       - HOSTPORT=0.0.0.0:5051
       - NEIGHBOURS=mark:5051,ken:5051,lucy:5051,sally:5051
-    volumes:
-      - ./log:/app/log
     command: "./main"
   
   sally:
@@ -42,6 +34,4 @@ services:
     environment:
       - HOSTPORT=0.0.0.0:5051
       - NEIGHBOURS=mark:5051,ken:5051,kate:5051,lucy:5051
-    volumes:
-      - ./log:/app/log
     command: "./main"

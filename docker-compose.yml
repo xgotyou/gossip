@@ -5,7 +5,7 @@ services:
     build: .
     environment:
       - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=lucy:5051 ken:5051 kate:5051 sally:5051
+      - NEIGHBOURS=lucy:5051,ken:5051,kate:5051,sally:5051
     volumes:
       - ./log:/app/log
     command: "./main"
@@ -14,7 +14,7 @@ services:
     build: .
     environment:
       - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051 ken:5051 kate:5051 sally:5051
+      - NEIGHBOURS=mark:5051,ken:5051,kate:5051,sally:5051
     volumes:
       - ./log:/app/log
     command: "./main"
@@ -23,7 +23,7 @@ services:
     build: .
     environment:
       - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051 lucy:5051 kate:5051 sally:5051
+      - NEIGHBOURS=mark:5051,lucy:5051,kate:5051,sally:5051
     volumes:
       - ./log:/app/log
     command: "./main"
@@ -32,7 +32,7 @@ services:
     build: .
     environment:
       - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051 ken:5051 lucy:5051 sally:5051
+      - NEIGHBOURS=mark:5051,ken:5051,lucy:5051,sally:5051
     volumes:
       - ./log:/app/log
     command: "./main"
@@ -41,7 +41,7 @@ services:
     build: .
     environment:
       - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051 ken:5051 kate:5051 lucy:5051
+      - NEIGHBOURS=mark:5051,ken:5051,kate:5051,lucy:5051
     volumes:
       - ./log:/app/log
     command: "./main"

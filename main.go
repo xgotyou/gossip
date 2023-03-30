@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 	"os"
 	"os/signal"
@@ -37,7 +38,9 @@ func main() {
 		pollInt = 5 * time.Second
 	}
 
-	go client.Manage(nbs, pollInt)
+	ctx, cancel := context.WithCancel(context.Background())
+	go client.Manage(ctx, nbs, pollInt)
+	defer cancel()
 
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM)

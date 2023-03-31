@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.21.12
-// source: proto/gossip.proto
+// source: gossip.proto
 
-package gossip
+package gossippb
 
 import (
 	context "context"
@@ -133,5 +133,5 @@ var GossipService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "proto/gossip.proto",
+	Metadata: "gossip.proto",
 }

@@ -1,37 +1,8 @@
 version: '3'
 
 services:
-  mark:
+  gossipmonger:
     build: .
-    environment:
-      - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=lucy:5051,ken:5051,kate:5051,sally:5051
-    command: "./main"
-
-  lucy:
-    build: .
-    environment:
-      - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051,ken:5051,kate:5051,sally:5051
-    command: "./main"
-
-  ken:
-    build: .
-    environment:
-      - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051,lucy:5051,kate:5051,sally:5051
-    command: "./main"
-  
-  kate:
-    build: .
-    environment:
-      - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051,ken:5051,lucy:5051,sally:5051
-    command: "./main"
-  
-  sally:
-    build: .
-    environment:
-      - HOSTPORT=0.0.0.0:5051
-      - NEIGHBOURS=mark:5051,ken:5051,kate:5051,lucy:5051
+    deploy:
+      replicas: 5
     command: "./main"

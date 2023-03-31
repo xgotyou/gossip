@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package gossip;
 
-option go_package = "./;gossip";
+option go_package = "./;gossippb";
 
 service GossipService {
   rpc DiscussGossip (stream Gossip) returns (stream Gossip);
